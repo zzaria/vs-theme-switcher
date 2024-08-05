@@ -33,7 +33,7 @@ export default class ConfigurationManager {
 
     const lastReload:any=this.context.globalState.get("lastReload")||0;
     let now=moment.utc();
-    if(now.diff(lastReload,"second")<5){
+    if(now.diff(lastReload,"second")<10){
       return;
     }
     
